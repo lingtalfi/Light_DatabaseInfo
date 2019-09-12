@@ -43,6 +43,8 @@ class LightDatabaseInfoService
      *
      * - columns: an array of the column names
      * - primary: an array of the column names of the primary key (empty if no primary key)
+     * - types: an array of columnName => type
+     *          Type is a string representing the mysql type ( ex: int(11), or varchar(128), ... ).
      * - ric: the @page(ric) array
      *
      *
@@ -70,6 +72,10 @@ class LightDatabaseInfoService
 
         $ric = $util->getRic($table);
         $ret['ric'] = $ric;
+
+
+        $types = $util->getColumnTypes($table, true);
+        $ret['types'] = $types;
 
         /**
          * Note: as for now, I didn't implement cache, because the perfs didn't ask for it.

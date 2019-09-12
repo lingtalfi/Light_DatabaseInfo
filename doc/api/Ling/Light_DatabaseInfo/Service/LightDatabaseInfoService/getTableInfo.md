@@ -26,6 +26,8 @@ The info array contains the following entries:
 
 - columns: an array of the column names
 - primary: an array of the column names of the primary key (empty if no primary key)
+- types: an array of columnName => type
+         Type is a string representing the mysql type ( ex: int(11), or varchar(128), ... ).
 - ric: the [ric](https://github.com/lingtalfi/NotationFan/blob/master/ric.md) array
 
 
@@ -71,7 +73,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/Service/LightDatabaseInfoService.php#L59-L79)
+See the source code for method [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/Service/LightDatabaseInfoService.php#L61-L85)
 
 
 See Also

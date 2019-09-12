@@ -66,6 +66,10 @@ database_info:
 History Log
 =============
 
+- 1.2.0 -- 2019-09-12
+
+    - updated LightDatabaseInfoService->getTableInfo method, now returns the types
+    
 - 1.1.0 -- 2019-09-12
 
     - added LightDatabaseInfoService->getTablesByPrefix method
