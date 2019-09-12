@@ -66,6 +66,10 @@ database_info:
 History Log
 =============
 
+- 1.0.1 -- 2019-09-12
+
+    - fix doc link
+    
 - 1.0.0 -- 2019-09-12
 
     - initial commit
