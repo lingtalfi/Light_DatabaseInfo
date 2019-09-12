@@ -26,6 +26,7 @@ The info array contains the following entries:
 
 - columns: an array of the column names
 - primary: an array of the column names of the primary key (empty if no primary key)
+- ric: the ric array
 
 
 If the reload flag is set to true, the cache will be refreshed before the result is returned.
@@ -66,7 +67,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/Service/LightDatabaseInfoService.php#L64-L98)
+See the source code for method [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/Service/LightDatabaseInfoService.php#L65-L99)
 
 
 See Also
