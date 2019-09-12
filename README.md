@@ -66,6 +66,10 @@ database_info:
 History Log
 =============
 
+- 1.0.3 -- 2019-09-12
+
+    - fix ric link in the doc
+    
 - 1.0.2 -- 2019-09-12
 
     - fix LightDatabaseInfoService->getTableInfo comment

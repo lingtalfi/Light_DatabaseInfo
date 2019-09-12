@@ -26,7 +26,7 @@ The info array contains the following entries:
 
 - columns: an array of the column names
 - primary: an array of the column names of the primary key (empty if no primary key)
-- ric: the ric array
+- ric: the [ric](https://github.com/lingtalfi/NotationFan/blob/master/ric.md) array
 
 
 If the reload flag is set to true, the cache will be refreshed before the result is returned.
