@@ -66,6 +66,11 @@ database_info:
 History Log
 =============
 
+- 1.1.0 -- 2019-09-12
+
+    - added LightDatabaseInfoService->getTablesByPrefix method
+    - updated LightDatabaseInfoService fetch methods, added the database argument
+    
 - 1.0.3 -- 2019-09-12
 
     - fix ric link in the doc

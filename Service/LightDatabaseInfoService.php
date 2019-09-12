@@ -26,12 +26,6 @@ class LightDatabaseInfoService
      */
     protected $container;
 
-    /**
-     * This property holds the database for this instance.
-     * @var string
-     */
-    protected $database;
-
 
     /**
      * Builds the LightDatabaseInfoService instance.
@@ -40,7 +34,6 @@ class LightDatabaseInfoService
     {
         $this->cacheDir = null;
         $this->container = null;
-        $this->database = null;
     }
 
 
@@ -58,24 +51,15 @@ class LightDatabaseInfoService
      *
      *
      * @param string $table
+     * @param string|null $database
      * @param bool $reload
      * @return array
      * @throws \Exception
      */
-    public function getTableInfo(string $table, bool $reload = false): array
+    public function getTableInfo(string $table, string $database = null, bool $reload = false): array
     {
         $ret = [];
-        /**
-         * @var $db SimplePdoWrapperInterface
-         */
-        $pdoWrapper = $this->container->get("database");
-        $util = new MysqlInfoUtil($pdoWrapper);
-        $databaseHasChanged = false;
-        $currentDb = $util->getDatabase();
-        if (null !== $this->database && $this->database !== $currentDb) {
-            $util->changeDatabase($this->database);
-            $databaseHasChanged = true;
-        }
+        $util = $this->prepareMysqlInfoUtil($database);
 
 
         $colNames = $util->getColumnNames($table);
@@ -91,11 +75,22 @@ class LightDatabaseInfoService
          * Note: as for now, I didn't implement cache, because the perfs didn't ask for it.
          * But to implement it, just add the cache layer exactly here (i.e. cache the ret array)
          */
-
-        if (true === $databaseHasChanged) {
-            $util->changeDatabase($currentDb);
-        }
         return $ret;
+    }
+
+
+    /**
+     * Returns the array of tables which prefix match the given prefix.
+     *
+     * @param string $prefix
+     * @param string|null $database
+     * @return array
+     * @throws \Exception
+     */
+    public function getTablesByPrefix(string $prefix, string $database = null): array
+    {
+        $util = $this->prepareMysqlInfoUtil($database);
+        return $util->getTables($prefix);
     }
 
 
@@ -122,13 +117,28 @@ class LightDatabaseInfoService
         $this->container = $container;
     }
 
+
+    //--------------------------------------------
+    //
+    //--------------------------------------------
     /**
-     * Sets the database.
+     * Returns a MysqlInfoUtil instance,
+     * and changes the database if the database is specified.
      *
-     * @param string $database
+     * @param string|null $database
+     * @return MysqlInfoUtil
+     * @throws \Exception
      */
-    public function setDatabase(string $database)
+    protected function prepareMysqlInfoUtil(string $database = null): MysqlInfoUtil
     {
-        $this->database = $database;
+        /**
+         * @var $db SimplePdoWrapperInterface
+         */
+        $pdoWrapper = $this->container->get("database");
+        $util = new MysqlInfoUtil($pdoWrapper);
+        if (null !== $database) {
+            $util->changeDatabase($database);
+        }
+        return $util;
     }
 }
