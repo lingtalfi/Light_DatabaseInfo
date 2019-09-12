@@ -46,6 +46,7 @@ class LightDatabaseInfoService
      * - types: an array of columnName => type
      *          Type is a string representing the mysql type ( ex: int(11), or varchar(128), ... ).
      * - ric: the @page(ric) array
+     * - autoIncrementedKey: the name of the auto-incremented column, or false (if there is no auto-incremented column)
      *
      *
      * If the reload flag is set to true, the cache will be refreshed before the result is returned.
@@ -76,6 +77,10 @@ class LightDatabaseInfoService
 
         $types = $util->getColumnTypes($table, true);
         $ret['types'] = $types;
+
+
+        $autoIncrementedKey = $util->getAutoIncrementedKey($table);
+        $ret['autoIncrementedKey'] = $autoIncrementedKey;
 
         /**
          * Note: as for now, I didn't implement cache, because the perfs didn't ask for it.
