@@ -16,7 +16,7 @@ Description
 ================
 
 
-public [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService/getTableInfo.md)(string $table, string $database = null, bool $reload = false) : array
+public [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService/getTableInfo.md)(string $table, ?string $database = null, ?bool $reload = false) : array
 
 
 
@@ -30,6 +30,7 @@ The info array contains the following entries:
          Type is a string representing the mysql type ( ex: int(11), or varchar(128), ... ).
 - ric: the [ric](https://github.com/lingtalfi/NotationFan/blob/master/ric.md) array
 - autoIncrementedKey: the name of the auto-incremented column, or false (if there is no auto-incremented column)
+- uniqueIndexes: It's an array of indexName => indexes. With indexes being an array of column names ordered by ascending index sequence.
 
 
 If the reload flag is set to true, the cache will be refreshed before the result is returned.
@@ -74,7 +75,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/Service/LightDatabaseInfoService.php#L62-L90)
+See the source code for method [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/Service/LightDatabaseInfoService.php#L63-L93)
 
 
 See Also

@@ -47,6 +47,7 @@ class LightDatabaseInfoService
      *          Type is a string representing the mysql type ( ex: int(11), or varchar(128), ... ).
      * - ric: the @page(ric) array
      * - autoIncrementedKey: the name of the auto-incremented column, or false (if there is no auto-incremented column)
+     * - uniqueIndexes: It's an array of indexName => indexes. With indexes being an array of column names ordered by ascending index sequence.
      *
      *
      * If the reload flag is set to true, the cache will be refreshed before the result is returned.
@@ -81,6 +82,8 @@ class LightDatabaseInfoService
 
         $autoIncrementedKey = $util->getAutoIncrementedKey($table);
         $ret['autoIncrementedKey'] = $autoIncrementedKey;
+
+        $ret['uniqueIndexes'] = $util->getUniqueIndexes($table);
 
         /**
          * Note: as for now, I didn't implement cache, because the perfs didn't ask for it.

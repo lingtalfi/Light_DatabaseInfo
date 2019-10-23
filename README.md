@@ -66,6 +66,10 @@ database_info:
 History Log
 =============
 
+- 1.4.0 -- 2019-10-23
+
+    - updated LightDatabaseInfoService->getTableInfo method, now also returns uniqueIndexes
+
 - 1.3.0 -- 2019-09-12
 
     - updated LightDatabaseInfoService->getTableInfo method, now returns the autoIncrementedKey

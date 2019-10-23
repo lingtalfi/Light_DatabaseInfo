@@ -16,7 +16,7 @@ Description
 ================
 
 
-public [LightDatabaseInfoService::getTablesByPrefix](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService/getTablesByPrefix.md)(string $prefix, string $database = null) : array
+public [LightDatabaseInfoService::getTablesByPrefix](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService/getTablesByPrefix.md)(string $prefix, ?string $database = null) : array
 
 
 
@@ -58,7 +58,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightDatabaseInfoService::getTablesByPrefix](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/Service/LightDatabaseInfoService.php#L101-L105)
+See the source code for method [LightDatabaseInfoService::getTablesByPrefix](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/Service/LightDatabaseInfoService.php#L104-L108)
 
 
 See Also
