@@ -94,6 +94,20 @@ class LightDatabaseInfoService
 
 
     /**
+     * Returns the array of tables for the given database.
+     * If the database is null, the default database will be used.
+     *
+     * @param string|null $database
+     * @return array
+     * @throws \Exception
+     */
+    public function getTables(string $database = null): array
+    {
+        $util = $this->prepareMysqlInfoUtil($database);
+        return $util->getTables();
+    }
+
+    /**
      * Returns the array of tables which prefix match the given prefix.
      *
      * @param string $prefix

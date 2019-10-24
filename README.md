@@ -66,6 +66,10 @@ database_info:
 History Log
 =============
 
+- 1.5.0 -- 2019-10-24
+
+    - add LightDatabaseInfoService->getTables method
+    
 - 1.4.0 -- 2019-10-23
 
     - updated LightDatabaseInfoService->getTableInfo method, now also returns uniqueIndexes

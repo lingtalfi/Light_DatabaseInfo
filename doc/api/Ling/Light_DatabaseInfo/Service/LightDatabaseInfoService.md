@@ -4,7 +4,7 @@
 
 The LightDatabaseInfoService class
 ================
-2019-09-12 --> 2019-10-23
+2019-09-12 --> 2019-10-24
 
 
 
@@ -31,6 +31,7 @@ class <span class="pl-k">LightDatabaseInfoService</span>  {
 - Methods
     - public [__construct](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService/__construct.md)() : void
     - public [getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService/getTableInfo.md)(string $table, ?string $database = null, ?bool $reload = false) : array
+    - public [getTables](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService/getTables.md)(?string $database = null) : array
     - public [getTablesByPrefix](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService/getTablesByPrefix.md)(string $prefix, ?string $database = null) : array
     - public [setCacheDir](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService/setCacheDir.md)(string $cacheDir) : void
     - public [setContainer](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService/setContainer.md)([Ling\Light\ServiceContainer\LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) $container) : void
@@ -63,6 +64,7 @@ Methods
 
 - [LightDatabaseInfoService::__construct](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService/__construct.md) &ndash; Builds the LightDatabaseInfoService instance.
 - [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService/getTableInfo.md) &ndash; Returns the info array for the given table.
+- [LightDatabaseInfoService::getTables](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService/getTables.md) &ndash; Returns the array of tables for the given database.
 - [LightDatabaseInfoService::getTablesByPrefix](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService/getTablesByPrefix.md) &ndash; Returns the array of tables which prefix match the given prefix.
 - [LightDatabaseInfoService::setCacheDir](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService/setCacheDir.md) &ndash; Sets the cacheDir.
 - [LightDatabaseInfoService::setContainer](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService/setContainer.md) &ndash; Sets the container.
