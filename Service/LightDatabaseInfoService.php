@@ -45,7 +45,9 @@ class LightDatabaseInfoService
      * - primary: an array of the column names of the primary key (empty if no primary key)
      * - types: an array of columnName => type
      *          Type is a string representing the mysql type ( ex: int(11), or varchar(128), ... ).
+     *          List of mysql types here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
      * - ric: the @page(ric) array
+     * - ricStrict: the @page(ric strict) array
      * - autoIncrementedKey: the name of the auto-incremented column, or false (if there is no auto-incremented column)
      * - uniqueIndexes: It's an array of indexName => indexes. With indexes being an array of column names ordered by ascending index sequence.
      *
@@ -74,6 +76,10 @@ class LightDatabaseInfoService
 
         $ric = $util->getRic($table);
         $ret['ric'] = $ric;
+
+
+        $ricStrict = $util->getRic($table, true);
+        $ret['ricStrict'] = $ricStrict;
 
 
         $types = $util->getColumnTypes($table, true);

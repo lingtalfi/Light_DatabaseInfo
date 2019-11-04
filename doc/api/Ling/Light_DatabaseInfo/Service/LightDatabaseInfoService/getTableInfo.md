@@ -28,7 +28,9 @@ The info array contains the following entries:
 - primary: an array of the column names of the primary key (empty if no primary key)
 - types: an array of columnName => type
          Type is a string representing the mysql type ( ex: int(11), or varchar(128), ... ).
+         List of mysql types here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
 - ric: the [ric](https://github.com/lingtalfi/NotationFan/blob/master/ric.md) array
+- ricStrict: the [ric strict](https://github.com/lingtalfi/NotationFan/blob/master/ric.md) array
 - autoIncrementedKey: the name of the auto-incremented column, or false (if there is no auto-incremented column)
 - uniqueIndexes: It's an array of indexName => indexes. With indexes being an array of column names ordered by ascending index sequence.
 
@@ -75,7 +77,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/Service/LightDatabaseInfoService.php#L63-L93)
+See the source code for method [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/Service/LightDatabaseInfoService.php#L65-L99)
 
 
 See Also

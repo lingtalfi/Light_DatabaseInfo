@@ -66,6 +66,10 @@ database_info:
 History Log
 =============
 
+- 1.6.0 -- 2019-11-04
+
+    - updated LightDatabaseInfoService->getTables, now returns a ricStrict entry
+    
 - 1.5.0 -- 2019-10-24
 
     - add LightDatabaseInfoService->getTables method
