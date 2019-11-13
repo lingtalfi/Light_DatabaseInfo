@@ -24,6 +24,7 @@ public [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Lig
 Returns the info array for the given table.
 The info array contains the following entries:
 
+- database: the name of the database containing the table
 - columns: an array of the column names
 - primary: an array of the column names of the primary key (empty if no primary key)
 - types: an array of columnName => type
@@ -85,7 +86,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/Service/LightDatabaseInfoService.php#L74-L113)
+See the source code for method [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/Service/LightDatabaseInfoService.php#L75-L117)
 
 
 See Also

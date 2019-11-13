@@ -55,7 +55,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightDatabaseInfoService::prepareMysqlInfoUtil](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/Service/LightDatabaseInfoService.php#L180-L191)
+See the source code for method [LightDatabaseInfoService::prepareMysqlInfoUtil](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/Service/LightDatabaseInfoService.php#L184-L195)
 
 
 See Also

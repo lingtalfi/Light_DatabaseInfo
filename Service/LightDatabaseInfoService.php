@@ -42,6 +42,7 @@ class LightDatabaseInfoService
      * Returns the info array for the given table.
      * The info array contains the following entries:
      *
+     * - database: the name of the database containing the table
      * - columns: an array of the column names
      * - primary: an array of the column names of the primary key (empty if no primary key)
      * - types: an array of columnName => type
@@ -76,6 +77,9 @@ class LightDatabaseInfoService
         $ret = [];
         $util = $this->prepareMysqlInfoUtil($database);
 
+
+        $dbName = $util->getDatabase();
+        $ret['database'] = $dbName;
 
         $colNames = $util->getColumnNames($table);
         $ret['columns'] = $colNames;
