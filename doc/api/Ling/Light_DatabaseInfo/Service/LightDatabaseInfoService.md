@@ -81,3 +81,6 @@ See the source code of [Ling\Light_DatabaseInfo\Service\LightDatabaseInfoService
 
 
 
+SeeAlso
+==============
+Previous class: [TypeHelper](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Helper/TypeHelper.md)<br>

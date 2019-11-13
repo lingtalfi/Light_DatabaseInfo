@@ -5,6 +5,7 @@ namespace Ling\Light_DatabaseInfo\Service;
 
 
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
+use Ling\Light_DatabaseInfo\Helper\TypeHelper;
 use Ling\SimplePdoWrapper\SimplePdoWrapperInterface;
 use Ling\SimplePdoWrapper\Util\MysqlInfoUtil;
 
@@ -85,6 +86,9 @@ class LightDatabaseInfoService
 
         $types = $util->getColumnTypes($table, true);
         $ret['types'] = $types;
+
+        $simpleTypes = TypeHelper::getSimpleTypes($types);
+        $ret['simpleTypes'] = $simpleTypes;
 
 
         $autoIncrementedKey = $util->getAutoIncrementedKey($table);
