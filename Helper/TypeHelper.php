@@ -54,7 +54,7 @@ class TypeHelper
                     $simpleType = 'date';
                     break;
                 default:
-                    $simpleType = 'string';
+                    $simpleType = 'str';
                     break;
             }
             $ret[$col] = $simpleType;

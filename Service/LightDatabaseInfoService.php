@@ -47,6 +47,13 @@ class LightDatabaseInfoService
      * - types: an array of columnName => type
      *          Type is a string representing the mysql type ( ex: int(11), or varchar(128), ... ).
      *          List of mysql types here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+     * - simpleTypes: an array of columnName => simpleType.
+     *          A simple type is a string amongst:
+     *              - str
+     *              - int
+     *              - date
+     *          See the @page(TypeHelper::getSimpleTypes) method for more info.
+     *
      * - ric: the @page(ric) array
      * - ricStrict: the @page(ric strict) array
      * - autoIncrementedKey: the name of the auto-incremented column, or false (if there is no auto-incremented column)

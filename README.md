@@ -66,6 +66,10 @@ database_info:
 History Log
 =============
 
+- 1.8.1 -- 2019-11-13
+
+    - fix functional typo in TypeHelper::getSimpleTypes
+    
 - 1.8.0 -- 2019-11-13
 
     - update LightDatabaseInfoService->getTableInfo, now returns simpleTypes entry

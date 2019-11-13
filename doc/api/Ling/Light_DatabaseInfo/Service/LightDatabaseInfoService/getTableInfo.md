@@ -29,6 +29,13 @@ The info array contains the following entries:
 - types: an array of columnName => type
          Type is a string representing the mysql type ( ex: int(11), or varchar(128), ... ).
          List of mysql types here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+- simpleTypes: an array of columnName => simpleType.
+         A simple type is a string amongst:
+             - str
+             - int
+             - date
+         See the [TypeHelper::getSimpleTypes](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Helper/TypeHelper/getSimpleTypes.md) method for more info.
+
 - ric: the [ric](https://github.com/lingtalfi/NotationFan/blob/master/ric.md) array
 - ricStrict: the [ric strict](https://github.com/lingtalfi/NotationFan/blob/master/ric.md) array
 - autoIncrementedKey: the name of the auto-incremented column, or false (if there is no auto-incremented column)
@@ -78,7 +85,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/Service/LightDatabaseInfoService.php#L67-L106)
+See the source code for method [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/Service/LightDatabaseInfoService.php#L74-L113)
 
 
 See Also
