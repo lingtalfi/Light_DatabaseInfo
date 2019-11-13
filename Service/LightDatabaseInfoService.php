@@ -50,6 +50,7 @@ class LightDatabaseInfoService
      * - ricStrict: the @page(ric strict) array
      * - autoIncrementedKey: the name of the auto-incremented column, or false (if there is no auto-incremented column)
      * - uniqueIndexes: It's an array of indexName => indexes. With indexes being an array of column names ordered by ascending index sequence.
+     * - foreignKeysInfo: It's an array of foreignKey => [ referencedDb, referencedTable, referencedColumn ].
      *
      *
      * If the reload flag is set to true, the cache will be refreshed before the result is returned.
@@ -90,6 +91,8 @@ class LightDatabaseInfoService
         $ret['autoIncrementedKey'] = $autoIncrementedKey;
 
         $ret['uniqueIndexes'] = $util->getUniqueIndexes($table);
+
+        $ret['foreignKeysInfo'] = $util->getForeignKeysInfo($table);
 
         /**
          * Note: as for now, I didn't implement cache, because the perfs didn't ask for it.

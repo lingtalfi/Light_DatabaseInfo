@@ -33,6 +33,7 @@ The info array contains the following entries:
 - ricStrict: the [ric strict](https://github.com/lingtalfi/NotationFan/blob/master/ric.md) array
 - autoIncrementedKey: the name of the auto-incremented column, or false (if there is no auto-incremented column)
 - uniqueIndexes: It's an array of indexName => indexes. With indexes being an array of column names ordered by ascending index sequence.
+- foreignKeysInfo: It's an array of foreignKey => [ referencedDb, referencedTable, referencedColumn ].
 
 
 If the reload flag is set to true, the cache will be refreshed before the result is returned.
@@ -77,7 +78,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/Service/LightDatabaseInfoService.php#L65-L99)
+See the source code for method [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/Service/LightDatabaseInfoService.php#L66-L102)
 
 
 See Also
