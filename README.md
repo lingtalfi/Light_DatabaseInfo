@@ -1,6 +1,6 @@
 Light_DatabaseInfo
 ===========
-2019-09-12
+2019-09-12 -> 2020-02-03
 
 
 
@@ -66,6 +66,11 @@ database_info:
 History Log
 =============
 
+    
+- 1.10.0 -- 2020-02-03
+
+    - replaced TypeHelper by external dependency
+    
 - 1.9.0 -- 2019-11-13
 
     - update LightDatabaseInfoService->getTableInfo, now also returns the database entry

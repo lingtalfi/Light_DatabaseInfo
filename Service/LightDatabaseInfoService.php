@@ -5,15 +5,16 @@ namespace Ling\Light_DatabaseInfo\Service;
 
 
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
-use Ling\Light_DatabaseInfo\Helper\TypeHelper;
-use Ling\SimplePdoWrapper\SimplePdoWrapperInterface;
+use Ling\Light_Database\Service\LightDatabaseService;
 use Ling\SimplePdoWrapper\Util\MysqlInfoUtil;
+use Ling\SimplePdoWrapper\Util\SimpleTypeHelper;
 
 /**
  * The LightDatabaseInfoService class.
  */
 class LightDatabaseInfoService
 {
+
 
     /**
      * This property holds the cacheDir for this instance.
@@ -98,7 +99,7 @@ class LightDatabaseInfoService
         $types = $util->getColumnTypes($table, true);
         $ret['types'] = $types;
 
-        $simpleTypes = TypeHelper::getSimpleTypes($types);
+        $simpleTypes = SimpleTypeHelper::getSimpleTypes($types);
         $ret['simpleTypes'] = $simpleTypes;
 
 
@@ -108,6 +109,7 @@ class LightDatabaseInfoService
         $ret['uniqueIndexes'] = $util->getUniqueIndexes($table);
 
         $ret['foreignKeysInfo'] = $util->getForeignKeysInfo($table);
+
 
         /**
          * Note: as for now, I didn't implement cache, because the perfs didn't ask for it.
@@ -128,7 +130,8 @@ class LightDatabaseInfoService
     public function getTables(string $database = null): array
     {
         $util = $this->prepareMysqlInfoUtil($database);
-        return $util->getTables();
+        $tables = $util->getTables();
+        return $tables;
     }
 
     /**
@@ -141,8 +144,10 @@ class LightDatabaseInfoService
      */
     public function getTablesByPrefix(string $prefix, string $database = null): array
     {
+
         $util = $this->prepareMysqlInfoUtil($database);
-        return $util->getTables($prefix);
+        $tables = $util->getTables($prefix);
+        return $tables;
     }
 
 
@@ -184,7 +189,7 @@ class LightDatabaseInfoService
     protected function prepareMysqlInfoUtil(string $database = null): MysqlInfoUtil
     {
         /**
-         * @var $db SimplePdoWrapperInterface
+         * @var $db LightDatabaseService
          */
         $pdoWrapper = $this->container->get("database");
         $util = new MysqlInfoUtil($pdoWrapper);

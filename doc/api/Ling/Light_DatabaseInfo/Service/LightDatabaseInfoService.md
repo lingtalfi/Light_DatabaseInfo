@@ -4,7 +4,7 @@
 
 The LightDatabaseInfoService class
 ================
-2019-09-12 --> 2019-11-13
+2019-09-12 --> 2020-02-03
 
 
 
@@ -81,6 +81,3 @@ See the source code of [Ling\Light_DatabaseInfo\Service\LightDatabaseInfoService
 
 
 
-SeeAlso
-==============
-Previous class: [TypeHelper](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Helper/TypeHelper.md)<br>

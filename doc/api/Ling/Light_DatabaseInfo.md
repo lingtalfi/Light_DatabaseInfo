@@ -1,6 +1,6 @@
 Ling/Light_DatabaseInfo
 ================
-2019-09-12 --> 2019-11-13
+2019-09-12 --> 2020-02-03
 
 
 
@@ -8,8 +8,6 @@ Ling/Light_DatabaseInfo
 Table of contents
 ===========
 
-- [TypeHelper](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Helper/TypeHelper.md) &ndash; The TypeHelper class.
-    - [TypeHelper::getSimpleTypes](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Helper/TypeHelper/getSimpleTypes.md) &ndash; Returns an array of column name => simple type from the given sql types.
 - [LightDatabaseInfoService](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService.md) &ndash; The LightDatabaseInfoService class.
     - [LightDatabaseInfoService::__construct](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService/__construct.md) &ndash; Builds the LightDatabaseInfoService instance.
     - [LightDatabaseInfoService::getTableInfo](https://github.com/lingtalfi/Light_DatabaseInfo/blob/master/doc/api/Ling/Light_DatabaseInfo/Service/LightDatabaseInfoService/getTableInfo.md) &ndash; Returns the info array for the given table.
@@ -22,6 +20,7 @@ Table of contents
 Dependencies
 ============
 - [Light](https://github.com/lingtalfi/Light)
+- [Light_Database](https://github.com/lingtalfi/Light_Database)
 - [SimplePdoWrapper](https://github.com/lingtalfi/SimplePdoWrapper)
 
 
