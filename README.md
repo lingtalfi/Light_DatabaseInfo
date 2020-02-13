@@ -1,6 +1,6 @@
 Light_DatabaseInfo
 ===========
-2019-09-12 -> 2020-02-03
+2019-09-12 -> 2020-02-13
 
 
 
@@ -66,6 +66,10 @@ database_info:
 History Log
 =============
 
+    
+- 1.11.0 -- 2020-02-13
+
+    - update LightDatabaseInfoService->getTableInfo, now also returns the referencedByTables and hasItems properties 
     
 - 1.10.0 -- 2020-02-03
 
